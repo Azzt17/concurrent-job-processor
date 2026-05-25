@@ -23,8 +23,6 @@ type Engine struct {
 	cfg Config
 	wg  sync.WaitGroup
 
-	// Variabel state di bawah ini SENGAJA ditulis tanpa perlindungan atomic
-	// untuk mendemonstrasikan Race Condition.
 	successCount   int64
 	failureCount   int64
 	cancelledCount int64
