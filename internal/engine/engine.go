@@ -80,6 +80,7 @@ func (e *Engine) processJob(ctx context.Context, workerID int, j job.Job) job.Re
 	simulateDuration := j.Simulate
 	if simulateDuration == 0 {
 		// Simulasi waktu pengerjaan acak 1-10 ms jika tidak ditentukan
+		// #nosec G404 -- ini hanya utk simulasi delay non-cryptography
 		simulateDuration = time.Duration(rand.Intn(10)+1) * time.Millisecond
 	}
 
