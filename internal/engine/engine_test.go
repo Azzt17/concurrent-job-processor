@@ -1,10 +1,11 @@
 package engine_test
 
 import (
-	"concurrent-job-processor/internal/engine"
 	"context"
 	"testing"
 	"time"
+
+	"github.com/Azzt17/concurrent-job-processor/internal/engine"
 )
 
 // TestEngine_AllJobsProcessed memverifikasi bahwa semua job terproses
